@@ -14,6 +14,8 @@ gem "responders", "2.1.0"
 # Appserver
 
 gem "unicorn", "4.8.3", require: false
+#alternativer Appserver
+gem "puma"
 
 # API and JSON
 
