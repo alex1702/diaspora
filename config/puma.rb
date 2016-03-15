@@ -4,8 +4,8 @@ daemonize
 
 
 pidfile '/var/run/diaspora/diaspora.pid'
-#bind 'unix:///var/run/diaspora/diaspora.sock'
-bind 'tcp://0.0.0.0:3000'
+bind 'unix:///var/run/diaspora/diaspora.sock'
+#bind 'tcp://0.0.0.0:3000'
 
 worker_timeout AppConfig.server.unicorn_timeout.to_i
 
