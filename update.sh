@@ -15,7 +15,7 @@ echo "Änderungen löschen..."
 git checkout -- *
 
 echo "Updates besorgen..."
-git pull origin social-elaon-de
+git pull update social-elaon-de
 
 echo "Aktuelle ruby version:"
 rvm list
