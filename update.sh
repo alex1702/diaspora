@@ -7,41 +7,46 @@ echo "Diaspora stoppen..."
 service diaspora stop
 
 cd /home/diaspora
-echo "Zu benutzer Diaspora wechseln..."
-su - diaspora
-echo "In diaspora Ordner wechseln"
-cd diaspora
 
-echo "Git status:"
-git status
+if [[ "diaspora" != "$LOGNAME" ]]; then
+	echo "Wechsel Benutzer zu diaspora"
+	su - diaspora -c "$0 diaspora"
+	echo $?
+fi
 
-echo "Alle Änderungen gesichert oder gelöscht?"
-read x
+if [ "$1" == "diaspora" ]; then
+	echo "In diaspora Ordner wechseln"
+	cd /home/diaspora/diaspora
 
-echo "Änderungen löschen..."
-git checkout -- *
+	echo "Git status:"
+	git status
 
-echo "Updates besorgen..."
-git pull update social-elaon-de
+	echo "Alle Änderungen gesichert oder gelöscht?"
+	read x
 
-echo "Aktuelle ruby version:"
-rvm list
+	echo "Updates besorgen..."
+	git pull update social-elaon-de
 
-cd .. && cd -
+	echo "Aktuelle ruby version:"
+	rvm list
 
-echo "Bundler installieren.."
-gem install bundler
-echo "Bunder ausführen.."
-bin/bundle
+	cd .. && cd -
 
-echo "DB-Update..."
-RAILS_ENV=production bin/rake db:migrate
+	echo "Bundler installieren.."
+	gem install bundler
+	echo "Bunder ausführen.."
+	bin/bundle
 
-echo "Assets cleanen und neu generien lassen..."
-RAILS_ENV=production bin/rake assets:clean
-RAILS_ENV=production bin/rake tmp:cache:clear assets:precompile
+	echo "DB-Update..."
+	RAILS_ENV=production bin/rake db:migrate
 
-exit
-echo "Diaspora starten..."
-service diaspora start
+	echo "Assets cleanen und neu generien lassen..."
+	RAILS_ENV=production bin/rake assets:clean
+	RAILS_ENV=production bin/rake tmp:cache:clear assets:precompile
+
+	echo "Diaspora starten..."
+	service diaspora start
+
+fi
+
 
