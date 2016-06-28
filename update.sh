@@ -11,6 +11,13 @@ echo "Zu benutzer Diaspora wechseln..."
 su - diaspora
 echo "In diaspora Ordner wechseln"
 cd diaspora
+
+echo "Git status:"
+git status
+
+echo "Alle Änderungen gesichert oder gelöscht?"
+read x
+
 echo "Änderungen löschen..."
 git checkout -- *
 
