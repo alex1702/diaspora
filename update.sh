@@ -1,19 +1,5 @@
 #!/bin/bash
 
-echo "System updaten und abhängigkeiten installieren..."
-/root/paketeInstallieren.sh
-
-echo "Diaspora stoppen..."
-service diaspora stop
-
-cd /home/diaspora
-
-if [[ "diaspora" != "$LOGNAME" ]]; then
-	echo "Wechsel Benutzer zu diaspora"
-	su - diaspora -c "$0 diaspora"
-	echo $?
-fi
-
 if [ "$1" == "diaspora" ]; then
 	echo "In diaspora Ordner wechseln"
 	cd /home/diaspora/diaspora
@@ -47,6 +33,24 @@ if [ "$1" == "diaspora" ]; then
 	echo "Diaspora starten..."
 	service diaspora start
 
+	exit
+
 fi
+
+echo "System updaten und abhängigkeiten installieren..."
+/root/paketeInstallieren.sh
+
+echo "Diaspora stoppen..."
+service diaspora stop
+
+cd /home/diaspora
+
+if [[ "diaspora" != "$LOGNAME" ]]; then
+	echo "Wechsel Benutzer zu diaspora"
+	su - diaspora -c "/home/diaspora/diaspora/update.sh diaspora"
+	echo $?
+fi
+
+
 
 
