@@ -462,7 +462,7 @@ GEM
     pry-byebug (3.4.2)
       byebug (~> 9.0)
       pry (~> 0.10)
-    puma (3.6.0)
+    puma (3.9.1)
     public_suffix (2.0.5)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
@@ -831,7 +831,7 @@ DEPENDENCIES
   pronto-scss (= 0.9.1)
   pry
   pry-byebug
-  puma
+  puma (= 3.9.1)
   quiet_assets (= 1.1.0)
   rack-cors (= 0.4.1)
   rack-google-analytics (= 1.2.0)
@@ -898,4 +898,4 @@ DEPENDENCIES
   will_paginate (= 3.1.5)
 
 BUNDLED WITH
-   1.14.5
+   1.15.3

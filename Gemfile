@@ -9,7 +9,7 @@ gem "responders", "2.3.0"
 # Appserver
 gem "unicorn", "5.2.0", require: false
 #alternativer Appserver
-gem "puma", "3.6.0"
+gem "puma", "3.9.1"
 
 gem "unicorn-worker-killer", "0.4.4"
 
