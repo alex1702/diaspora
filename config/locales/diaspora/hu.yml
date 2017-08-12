@@ -31,10 +31,6 @@ hu:
           attributes:
             poll:
               already_participated: "Már részt vettél ebben a körkérdésben!"
-        request:
-          attributes:
-            from_id:
-              taken: "már létező kérés."
         reshare:
           attributes:
             root_guid:
@@ -125,6 +121,8 @@ hu:
       user_applications:
         index:
           edit_applications: "Alkalmazások"
+          title: "Engedélyezett alkalmazások"
+        no_applications: "Nincsenek engedélyezett alkalmazásaid"
   are_you_sure: "Biztos vagy benne?"
   are_you_sure_delete_account: "Biztos, hogy törölni akarod a fiókodat? A törlés nem vonható vissza!"
   aspect_memberships:
@@ -212,7 +210,6 @@ hu:
       commenting: "Hozzászólok.."
   contacts:
     index:
-      add_a_new_aspect: "Új csoport"
       add_contact: "Ismerős hozzáadása"
       all_contacts: "Összes ismerős"
       community_spotlight: "A figyelem középpontjában"
@@ -415,6 +412,7 @@ hu:
       be_who_you_want_to_be_info: "Sok közösségi hálózat ragaszkodik ahhoz, hogy a valódi identitásod használd. A diaspora* nem. Itt az lehetsz, aki csak akarsz, és te döntöd el, hogy mennyi információt osztasz meg magadról. Itt tényleg rajtad áll a döntés, hogyan lépsz kapcsolatba másokkal."
       byline: "Az online közösség, ahol tiéd az irányítás."
       choose_your_audience: "Válaszd meg közönséged"
+      headline: "Üdvözöl a(z) %{pod_name}"
   invitation_codes:
     not_valid: "Ez a meghívó kód már nem érvényes"
   invitations:
@@ -508,7 +506,6 @@ hu:
       other: "%{actors} megemlített téged egy, már törölt bejegyzésben."
       two: "%{actors} megemlített téged egy törölt bejegyzésben."
       zero: "%{actors} megemlített téged egy, már törölt bejegyzésben."
-    post: "bejegyzés"
     private_message:
       few: "%{actors} üzenetet küldött neked."
       many: "%{actors} üzenetet küldött neked."
@@ -719,7 +716,7 @@ hu:
     delete_link: "Elem törlése"
     not_found: "<u>A bejegyzés/hozzászólás nem található. Valószínűleg törölte a felhasználó.</u>"
     post_label: "<b>Bejegyzés</b>: %{title}"
-    reason_label: "Indok:"
+    reason_label: "Ok:"
     reported_label: "<b>Jelentette:</b> %{person}"
     review_link: "Átnézettnek jelöl"
     status:
@@ -751,6 +748,7 @@ hu:
       not_logged_in: "Jelenleg nem vagy bejelentkezve."
       really_disconnect: "%{service} kapcsolat leválasztása?"
       services_explanation: "Ha kapcsolódsz más szolgáltatásokhoz, lehetőséged lesz bejegyzéseket küldeni a felületükre, amint azokat a diaspora* rendszerén belül megírod."
+      title: "Kapcsolódó szolgáltatások kezelése"
     provider:
       facebook: "Facebook"
       tumblr: "Tumblr"
@@ -797,7 +795,6 @@ hu:
       posting: "Küldés..."
       remove_location: "Tartózkodási hely eltávolítása"
       share: "Megosztás"
-      upload_photos: "Képek feltöltése"
       whats_on_your_mind: "Mi jár a fejedben?"
     stream_element:
       via: "ezen keresztül: %{link}"
@@ -825,8 +822,6 @@ hu:
     total_users: "összes felhasználó"
     version: "változat"
   status_messages:
-    create:
-      success: "Megemlítetted: %{names}"
     new:
       mentioning: "Megemlít: %{person}"
     too_long: "Rövidíts. Az állapotfrissítésed nem lehet hosszabb %{count} leütésnél. Jelenleg %{current_length} karakterből áll"
@@ -898,6 +893,7 @@ hu:
       comment_on_post: "valaki hozzászólt egy bejegyzésedhez?"
       current_password: "Jelenlegi jelszó"
       current_password_expl: "amelyikkel bejelentkezel..."
+      default_post_visibility: "Alapértelmezett csoport az új bejegyzések számára"
       download_export_photos: "Képeim letöltése"
       edit_account: "Fiók szerkesztése"
       email_awaiting_confirmation: "Aktivációs link elküldve ide: %{unconfirmed_email}. Amíg nem erősíted meg az új címed, addig a régit használjuk: %{email}."
@@ -937,6 +933,7 @@ hu:
       ignored_users: "Mellőzött felhasználók"
       no_user_ignored_message: "Jelenleg nem mellőzöl más felhasználót"
       stop_ignoring: "Mellőzés feloldása"
+      strip_exif: "Metaadatok (hely, szerző és fényképezőgép modell) eltávolítása a feltöltött képekről (ajánlott)"
       title: "Adatvédelmi beállítások"
     public:
       does_not_exist: "%{username} nem létezik!"

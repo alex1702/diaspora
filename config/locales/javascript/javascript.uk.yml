@@ -183,6 +183,7 @@ uk:
       invalid_ext: "{file} має неприпустиме розширення. Дозволені тільки {extensions}."
       looking_good: "Боже мій, ви виглядаєте приголомшливо!"
       size_error: "{file} має занадто великий розмір, максимальний розмір файлу: {sizeLimit}."
+      upload_photos: "Завантажити фото"
     poll:
       answer_count:
         few: "<%=count%> голоси"
@@ -215,7 +216,6 @@ uk:
       you_have_no_tags: "у вас немає міток!"
     publisher:
       add_option: "Додати відповідь"
-      limited: "Обмежена - ваш запис буде видимий тільки вказаним вами людям"
       markdown_editor:
         preview: "Попередній перегляд"
         texts:
@@ -244,18 +244,18 @@ uk:
           quote: "Вставити цитату"
           write: "Редагувати повідомлення"
         write: "Записати"
+      mention_success: "Успішно згадано: <%= names %>"
       near_from: "Відправлено з: <%= location %>"
       option: "Відповідь"
-      public: "Публічна - ваш запис буде видимий усім, зокрема пошуковим системам"
       question: "Питання"
     remove_post: "Видалити цей запис?"
     report:
-      name: "Донести"
+      name: "Поскаржитися"
       prompt: "Будь ласка, вкажіть причину:"
       prompt_default: "образливий зміст"
       status:
-        created: "Донос успішно відправлений"
-        exists: "Донос вже відправлений"
+        created: "Скаргу надіслано"
+        exists: "Скарга вже надіслана"
     reshares:
       post: "Поширити запис <%= name %>?"
       successful: "Ви успішно поділилися записом!"
@@ -318,14 +318,18 @@ uk:
       wasnt_that_interesting: "Гаразд, мабуть, стежити за міткою #<%= tagName %> було не так вже цікаво..."
     timeago:
       day: "день"
-      days: "%d днів[-i]"
+      days:
+        other: "%d днів[-i]"
       hour: "близько години"
-      hours: "близько %d годин"
+      hours:
+        other: "близько %d годин"
       inPast: "в будь-який момент"
       minute: "близько хвилини"
-      minutes: "%d хвилин[-и]"
+      minutes:
+        other: "%d хвилин[-и]"
       month: "близько місяця"
-      months: "%d місяця[-ів]"
+      months:
+        other: "%d місяця[-ів]"
       prefixAgo: ""
       prefixFromNow: "через"
       seconds: "декілька секунд"
@@ -333,7 +337,8 @@ uk:
       suffixFromNow: "з цієї миті"
       wordSeparator: " "
       year: "близько року"
-      years: "%d років"
+      years:
+        other: "%d років"
     unblock_failed: "Не вдалось розблокувати цього користувача"
     viewer:
       reshared: "Поділилися"

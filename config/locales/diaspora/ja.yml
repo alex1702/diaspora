@@ -31,10 +31,6 @@ ja:
           attributes:
             poll:
               already_participated: "あなたはすでにこの投票に参加しました！"
-        request:
-          attributes:
-            from_id:
-              taken: "既存のリクエストと重複しています。"
         reshare:
           attributes:
             root_guid:
@@ -275,7 +271,6 @@ ja:
       commenting: "コメント投稿中…"
   contacts:
     index:
-      add_a_new_aspect: "新しいアスペクトを追加する"
       add_contact: "連絡先を追加する"
       all_contacts: "すべての連絡先"
       community_spotlight: "コミュニティスポットライト"
@@ -666,7 +661,6 @@ ja:
     mentioned_deleted:
       other: "%{actors}さんが削除された投稿であなたにメンションしました。"
       zero: "%{actors}さんが削除された投稿であなたにメンションしました。"
-    post: "（投稿で）"
     private_message:
       other: "%{actors}さんが、あなたにメッセージを送信しました。"
       zero: "%{actors}さんが、あなたにメッセージを送信しました。"
@@ -1025,7 +1019,6 @@ ja:
       posting: "投稿中"
       remove_location: "所在地を削除"
       share: "シェア"
-      upload_photos: "写真をアップロード"
       whats_on_your_mind: "いま何を考えている？"
     stream_element:
       via: "%{link} で"
@@ -1053,8 +1046,6 @@ ja:
     total_users: "合計ユーザー数"
     version: "バージョン"
   status_messages:
-    create:
-      success: "%{names}を参照するのに成功しました。"
     new:
       mentioning: "%{person}さんのメンション"
     too_long: |-
@@ -1072,6 +1063,8 @@ ja:
     aspects_stream: "アスペクト"
     comment_stream:
       title: "コメントした投稿"
+    commented:
+      title: "コメントした投稿"
     community_spotlight_stream: "コミュニティスポットライト"
     followed_tag:
       add_a_tag: "タグを追加する"
@@ -1081,6 +1074,8 @@ ja:
     followed_tags_stream: "フォローしたタグ"
     like_stream:
       title: "ストリーム、いいね！"
+    liked:
+      title: "いいね！した投稿"
     mentioned_stream: "@メンション"
     mentions:
       title: "@メンション"

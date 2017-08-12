@@ -16,7 +16,6 @@ require "capybara/session"
 require "capybara/poltergeist"
 
 require "cucumber/api_steps"
-require "json_spec/cucumber"
 
 # Ensure we know the appservers port
 Capybara.server_port = AppConfig.pod_uri.port
@@ -24,7 +23,7 @@ Rails.application.routes.default_url_options[:host] = AppConfig.pod_uri.host
 Rails.application.routes.default_url_options[:port] = AppConfig.pod_uri.port
 
 Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, timeout: 60)
+  Capybara::Poltergeist::Driver.new(app, timeout: 80)
 end
 
 Capybara.javascript_driver = :poltergeist

@@ -625,20 +625,6 @@ h1.session {
   font-weight: 200;
 }
 
-form p.checkbox_select {
-  position: relative;
-  label {
-    left: 25px;
-    top: 4px;
-    position: absolute;
-    font-size: 1em;
-  }
-  img {
-    position: relative;
-    top: 6px;
-  }
-}
-
 #profile_photo_upload {
   margin-top: 5px;
   min-height: 100px;
@@ -899,3 +885,9 @@ select#aspect_ids_ {
 .form-control:active, .form-control:focus { border-color: #999999; }
 
 .tag_following_action { margin: 5px 0 10px 0; }
+
+// --- Admin pages ---
+.pod-version {
+  // The fetching of the pod version is not done on mobile currently so we hide this alert.
+  display: none;
+}
