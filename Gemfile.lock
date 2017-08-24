@@ -203,7 +203,7 @@ GEM
       sigar (~> 0.7.3)
       state_machines
       thor
-    fabrication (2.16.2)
+    fabrication (2.16.3)
     factory_girl (4.8.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.8.0)
@@ -289,7 +289,7 @@ GEM
       execjs (~> 2.0)
       sprockets (>= 2.0.0)
       tilt (>= 1.2)
-    hashdiff (0.3.5)
+    hashdiff (0.3.6)
     hashie (3.5.6)
     hitimes (1.2.6)
     http (2.2.2)
@@ -468,11 +468,11 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-byebug (3.4.2)
-      byebug (~> 9.0)
+    pry-byebug (3.4.3)
+      byebug (>= 9.0, < 9.1)
       pry (~> 0.10)
-    puma (3.9.1)
     public_suffix (2.0.5)
+    puma (3.10.0)
     rack (2.0.3)
     rack-cors (1.0.1)
     rack-google-analytics (1.2.0)
@@ -658,7 +658,7 @@ GEM
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
-    simplecov-html (0.10.1)
+    simplecov-html (0.10.2)
     sinon-rails (1.15.0)
       railties (>= 3.1)
     slop (3.6.0)
@@ -838,6 +838,7 @@ DEPENDENCIES
   pronto-scss (= 0.9.1)
   pry
   pry-byebug
+  puma (= 3.10.0)
   rack-cors (= 1.0.1)
   rack-google-analytics (= 1.2.0)
   rack-piwik (= 0.3.0)
@@ -905,4 +906,4 @@ DEPENDENCIES
   will_paginate (= 3.1.6)
 
 BUNDLED WITH
-   1.15.3
+   1.15.4

@@ -8,7 +8,7 @@ gem "responders", "2.4.0"
 
 
 #alternativer Appserver
-gem "puma", "3.9.1"
+gem "puma", "3.10.0"
 
 # Appserver
 gem "unicorn", "5.3.0", require: false
