@@ -1,0 +1,16 @@
+[Unit]
+Description=Diaspora Worker
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/diaspora.conf
+ExecStart=/home/diaspora/.rvm/bin/systemd_bundle exec sidekiq
+TimeoutStopSec=20
+KillMode=control-group
+Restart=always
+User=diaspora
+WorkingDirectory=/home/diaspora
+
+[Install]
+WantedBy=multi-user.target
+
