@@ -14,10 +14,11 @@ Eye.application("diaspora") do
   stderr "log/eye_processes_stderr.log"
 
   process :web do
-    unicorn_command = "bin/bundle exec unicorn -c config/unicorn.rb"
+    # unicorn_command = "bin/bundle exec unicorn -c config/unicorn.rb"
+    unicorn_command = "bin/bundle exec puma -C config/puma.rb"
 
     if rails_env == "production"
-      start_command "#{unicorn_command} -D"
+      start_command "#{unicorn_command} -d"
       daemonize false
       restart_command "kill -USR2 {PID}"
       restart_grace 10.seconds
