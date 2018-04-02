@@ -1,6 +1,6 @@
 require_relative "load_config"
 
-state_path tmp/pids/web.state
+state_path "tmp/pids/web.state"
 pidfile AppConfig.server.pid.get
 bind AppConfig.server.listen.get
 
