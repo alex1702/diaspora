@@ -19,8 +19,8 @@ gem "unicorn-worker-killer", "0.4.4"
 
 # Federation
 
-gem "diaspora_federation-json_schema", "0.2.2"
-gem "diaspora_federation-rails", "0.2.2"
+gem "diaspora_federation-json_schema", "0.2.4"
+gem "diaspora_federation-rails", "0.2.4"
 
 # API and JSON
 
@@ -30,7 +30,7 @@ gem "json-schema", "2.8.0"
 
 # Authentication
 
-gem "devise", "4.3.0"
+gem "devise", "4.4.1"
 gem "devise_lastseenable", "0.0.6"
 
 # Captcha
@@ -126,11 +126,13 @@ source "https://rails-assets.org" do
   gem "rails-assets-perfect-scrollbar",                   "0.6.16"
 end
 
+gem "markdown-it-html5-embed", "1.0.0"
+
 # Localization
 
 gem "http_accept_language", "2.1.1"
 gem "i18n-inflector-rails", "1.0.7"
-gem "rails-i18n",           "5.0.4"
+gem "rails-i18n",           "5.1.1"
 
 # Mail
 
@@ -141,7 +143,7 @@ gem "leaflet-rails",       "1.2.0"
 
 # Parsing
 
-gem "nokogiri",          "1.8.1"
+gem "nokogiri",          "1.8.2"
 gem "open_graph_reader", "0.6.2" # also update User-Agent in features/support/webmock.rb
 gem "redcarpet",         "3.4.0"
 gem "ruby-oembed",       "0.12.0"
@@ -190,7 +192,7 @@ gem "typhoeus",           "1.3.0"
 # Views
 
 gem "gon",                     "6.1.0"
-gem "hamlit",                  "2.8.4"
+gem "hamlit",                  "2.8.6"
 gem "mobile-fu",               "1.4.0"
 gem "rails-timeago",           "2.16.0"
 gem "will_paginate",           "3.1.6"
@@ -296,7 +298,7 @@ group :test do
   gem "timecop",            "0.9.1"
   gem "webmock",            "3.0.1", require: false
 
-  gem "diaspora_federation-test", "0.2.2"
+  gem "diaspora_federation-test", "0.2.4"
 
   # Coverage
   gem "coveralls", "0.8.21", require: false
